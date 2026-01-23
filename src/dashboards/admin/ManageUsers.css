@@ -1,0 +1,41 @@
+.manage-users h3 {
+  margin-bottom: 16px;
+}
+
+/* ACTION COLUMN */
+.actions-col {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn.approve {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.btn.reject {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn.approve:hover {
+  background: #bbf7d0;
+}
+
+.btn.reject:hover {
+  background: #fecaca;
+}

@@ -1,0 +1,54 @@
+/* SUMMARY CARDS */
+.payment-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.pay-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.pay-card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.pay-card h2 {
+  font-size: 28px;
+  margin-top: 8px;
+}
+
+.pay-card.success {
+  border-left: 5px solid #16a34a;
+}
+
+.pay-card.pending {
+  border-left: 5px solid #f59e0b;
+}
+
+/* TABLE */
+.volunteer-payments h3 {
+  margin-bottom: 16px;
+}
+
+/* STATUS */
+.status.paid {
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #d97706;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}

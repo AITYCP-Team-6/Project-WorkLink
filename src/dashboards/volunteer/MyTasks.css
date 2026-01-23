@@ -1,0 +1,53 @@
+.my-tasks h3 {
+  margin-bottom: 16px;
+}
+
+/* ACTION COLUMN */
+.actions-col {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* COMPLETE BUTTON */
+.btn.complete {
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn.complete:hover {
+  background: #15803d;
+}
+
+/* STATUS */
+.status.active {
+  background: #fef3c7;
+  color: #d97706;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.status.completed {
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* DONE TEXT */
+.done-text {
+  color: #16a34a;
+  font-weight: 500;
+  font-size: 13px;
+}

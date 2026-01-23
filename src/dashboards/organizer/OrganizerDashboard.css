@@ -1,0 +1,39 @@
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.stat-card h2 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.stat-card h2.warning {
+  color: #f59e0b;
+}
+
+/* EVENTS TABLE */
+.organizer-events h3 {
+  margin-bottom: 16px;
+}
+
+.empty-text {
+  color: #64748b;
+  font-size: 14px;
+  padding: 20px;
+}

@@ -1,0 +1,102 @@
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.stat-card h2 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.stat-card h2.warning {
+  color: #f59e0b;
+}
+
+.stat-card h2.success {
+  color: #16a34a;
+}
+
+/* CHARTS */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 0 20px 30px;
+}
+
+.chart-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.chart-box h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* TABLE */
+.table-card {
+  background: #ffffff;
+  margin: 0 20px 30px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.table-card h3 {
+  margin-bottom: 15px;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  font-size: 14px;
+  text-align: left;
+}
+
+thead {
+  background: #f8fafc;
+}
+
+/* STATUS */
+.status.verified {
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* ACTION */
+.edit {
+  color: #4f46e5;
+  cursor: pointer;
+  font-weight: 500;
+}

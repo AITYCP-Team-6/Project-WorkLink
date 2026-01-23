@@ -1,0 +1,33 @@
+.report-card {
+  background: #ffffff;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+}
+
+.report-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.report-card p {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.btn.generate {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn.generate:hover {
+  background: #4338ca;
+}
