@@ -22,6 +22,7 @@ import VolunteerPayments from "./dashboards/volunteer/Payments";
 
 /* COMMON */
 import Reports from "./dashboards/common/Reports";
+import OrganizerApplications from "./dashboards/organizer/OrganizerApplications";
 
 function App() {
   return (
@@ -42,6 +43,10 @@ function App() {
       <Route path="/organizer/create-event" element={<CreateEvent />} />
       <Route path="/organizer/payments" element={<OrganizerPayments />} />
       <Route path="/organizer/reports" element={<Reports role="organizer" />} />
+      <Route
+        path="/organizer/applications"
+        element={<OrganizerApplications />}
+      />
 
       {/* VOLUNTEER */}
       <Route path="/volunteer" element={<VolunteerDashboard />} />

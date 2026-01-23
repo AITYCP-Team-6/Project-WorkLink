@@ -48,6 +48,12 @@ const Sidebar = ({ role }) => {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/organizer/applications" className="nav-link">
+                Applications
+              </NavLink>
+            </li>
+
+            <li>
               <NavLink to="/organizer/payments" className="nav-link">
                 Payments
               </NavLink>

@@ -2,34 +2,10 @@ import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
 import "../../styles/layout.css";
 import "./MyApplications.css";
+import { useVolunteer } from "../../context/VolunteerContext";
 
 const MyApplications = () => {
-  const applications = [
-    {
-      id: 1,
-      event: "City Tech Summit 2025",
-      organizer: "TechFlow Events",
-      role: "Registration Desk",
-      date: "15 Mar 2025",
-      status: "pending",
-    },
-    {
-      id: 2,
-      event: "Community Marathon",
-      organizer: "City Sports Dept",
-      role: "Water Station",
-      date: "10 Feb 2025",
-      status: "approved",
-    },
-    {
-      id: 3,
-      event: "Job Fair 2025",
-      organizer: "Job Expo Org",
-      role: "Help Desk",
-      date: "05 Jan 2025",
-      status: "rejected",
-    },
-  ];
+  const { applications } = useVolunteer();
 
   return (
     <div className="app-layout">
@@ -60,20 +36,9 @@ const MyApplications = () => {
                   <tr key={app.id}>
                     <td>{app.event}</td>
                     <td>{app.organizer}</td>
-                    <td>{app.role}</td>
                     <td>{app.date}</td>
                     <td>
-                      <span
-                        className={`status ${
-                          app.status === "approved"
-                            ? "approved"
-                            : app.status === "rejected"
-                              ? "rejected"
-                              : "pending"
-                        }`}
-                      >
-                        {app.status}
-                      </span>
+                      <span className="status pending">pending</span>
                     </td>
                   </tr>
                 ))}
