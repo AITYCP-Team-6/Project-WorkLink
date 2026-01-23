@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
-/* HOME */
-import Home from "./Home";
+/* AUTH */
+import Login from "./auth/Login";
+import Register from "./auth/Register";
 
 /* ADMIN */
 import AdminDashboard from "./dashboards/admin/AdminDashboard";
@@ -19,28 +20,30 @@ import MyTasks from "./dashboards/volunteer/MyTasks";
 import MyApplications from "./dashboards/volunteer/MyApplications";
 import VolunteerPayments from "./dashboards/volunteer/Payments";
 
-/* COMMON REPORTS */
+/* COMMON */
 import Reports from "./dashboards/common/Reports";
 
 function App() {
   return (
     <Routes>
-      {/* HOME */}
-      <Route path="/" element={<Home />} />
+      {/* AUTH */}
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
-      {/* ADMIN ROUTES */}
+      {/* ADMIN */}
       <Route path="/admin" element={<AdminDashboard />} />
       <Route path="/admin/manage-users" element={<ManageUsers />} />
       <Route path="/admin/payments" element={<AdminPayments />} />
       <Route path="/admin/reports" element={<Reports role="admin" />} />
 
-      {/* ORGANIZER ROUTES */}
+      {/* ORGANIZER */}
       <Route path="/organizer" element={<OrganizerDashboard />} />
       <Route path="/organizer/create-event" element={<CreateEvent />} />
       <Route path="/organizer/payments" element={<OrganizerPayments />} />
       <Route path="/organizer/reports" element={<Reports role="organizer" />} />
 
-      {/* VOLUNTEER ROUTES */}
+      {/* VOLUNTEER */}
       <Route path="/volunteer" element={<VolunteerDashboard />} />
       <Route path="/volunteer/jobs" element={<MyTasks />} />
       <Route path="/volunteer/applications" element={<MyApplications />} />

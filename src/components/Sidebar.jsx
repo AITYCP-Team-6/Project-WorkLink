@@ -1,14 +1,14 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../auth/AuthContext";
 import "./Sidebar.css";
 
 const Sidebar = ({ role }) => {
   const navigate = useNavigate();
+  const { logout } = useAuth();
 
   const handleLogout = () => {
-    // optional later:
-    // localStorage.clear();
-    // sessionStorage.clear();
-    navigate("/");
+    logout(); // clear auth + localStorage
+    navigate("/login"); // redirect to login page
   };
 
   return (
