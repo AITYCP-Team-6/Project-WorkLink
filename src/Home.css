@@ -1,47 +1,112 @@
-.home-container {
+.home {
   min-height: 100vh;
   background: linear-gradient(135deg, #4f46e5, #1e293b);
+  color: #ffffff;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+/* HEADER */
+.home-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px 40px;
 }
 
-.home-card {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 18px;
-  max-width: 420px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.home-card h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.home-card p {
-  font-size: 14px;
-  color: #64748b;
-  margin-bottom: 30px;
+.logo {
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .home-actions {
   display: flex;
-  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #4f46e5;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  flex: 1;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  color: #e5e7eb;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
   gap: 14px;
 }
 
-.home-actions button {
-  padding: 12px;
-  font-size: 15px;
-  border-radius: 10px;
+.hero-buttons button {
+  padding: 12px 26px;
+  border-radius: 30px;
   border: none;
+  font-size: 15px;
   cursor: pointer;
-  background: #4f46e5;
+}
+
+.hero-buttons .secondary {
+  background: transparent;
+  border: 1px solid #ffffff;
   color: #ffffff;
 }
 
-.home-actions button:hover {
-  background: #4338ca;
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 60px 40px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.home-footer {
+  background: #0f172a;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
 }
