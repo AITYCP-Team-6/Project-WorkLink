@@ -1,19 +1,29 @@
 import "./Navbar.css";
 
-const Navbar = ({ role, title }) => {
+const Navbar = ({ role = "User", title }) => {
   return (
-    <div className="navbar">
+    <header className="navbar">
+      {/* Left Section */}
       <div className="navbar-left">
-        {title && <h2 className="page-title">{title}</h2>}
+        {title ? (
+          <h2 className="page-title">{title}</h2>
+        ) : (
+          <span className="brand">WorkLink</span>
+        )}
       </div>
 
+      {/* Right Section */}
       <div className="navbar-right">
-        <span className="login-info">
-          Logged in as <b>{role}</b>
-        </span>
-        <div className="avatar">{role?.charAt(0).toUpperCase()}</div>
+        <div className="login-info">
+          <span className="role-label">Logged in as</span>
+          <strong className="role">{role}</strong>
+        </div>
+
+        <div className="avatar" title={role}>
+          {role.charAt(0).toUpperCase()}
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 

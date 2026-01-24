@@ -1,70 +1,109 @@
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="home">
-      {/* NAVBAR */}
-      <header className="home-header">
-        <h1 className="logo">WorkLink</h1>
-        <div className="home-actions">
-          <button className="btn-outline" onClick={() => navigate("/login")}>
-            Login
-          </button>
-          <button className="btn-primary" onClick={() => navigate("/register")}>
-            Get Started
-          </button>
-        </div>
-      </header>
-
-      {/* HERO SECTION */}
+      {/* Hero Section */}
       <section className="hero">
-        <h2>Manage Events & Temporary Staff Effortlessly</h2>
-        <p>
-          WorkLink helps organizations manage volunteers, payments, and event
-          operations with transparency and efficiency.
-        </p>
+        <div className="hero-content">
+          <h1>WorkLink</h1>
+          <p>
+            Smart workforce management platform connecting administrators,
+            organizers, and volunteers in one seamless ecosystem.
+          </p>
 
-        <div className="hero-buttons">
-          <button onClick={() => navigate("/register")}>Register Now</button>
-          <button className="secondary" onClick={() => navigate("/login")}>
-            Login
-          </button>
+          <div className="hero-actions">
+            <Link to="/login" className="btn primary">
+              Get Started
+            </Link>
+            <Link to="/about" className="btn secondary">
+              Learn More
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* FEATURES */}
+      {/* Features Section */}
       <section className="features">
-        <div className="feature-card">
-          <h3>For Admins</h3>
-          <p>
-            Monitor users, approve registrations, manage payments, and generate
-            system reports.
-          </p>
-        </div>
+        <h2>Why Choose WorkLink?</h2>
 
-        <div className="feature-card">
-          <h3>For Organizers</h3>
-          <p>
-            Create events, assign volunteers, track work hours, and manage
-            payouts easily.
-          </p>
-        </div>
+        <div className="feature-grid">
+          <div className="feature-card">
+            <h3>Centralized Management</h3>
+            <p>
+              Admins can manage events, approvals, and users from a single
+              dashboard with complete visibility.
+            </p>
+          </div>
 
-        <div className="feature-card">
-          <h3>For Volunteers</h3>
-          <p>
-            Find events, apply for tasks, track completed work, and view
-            earnings transparently.
-          </p>
+          <div className="feature-card">
+            <h3>Role-Based Dashboards</h3>
+            <p>
+              Dedicated dashboards for organizers and volunteers, designed for
+              clarity, speed, and productivity.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <h3>Real-Time Coordination</h3>
+            <p>
+              Assign tasks, track participation, and ensure smooth event
+              execution without communication gaps.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <h3>Scalable & Secure</h3>
+            <p>
+              Built with modern web technologies ensuring performance, security,
+              and future scalability.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="home-footer">
-        <p>© 2026 WorkLink. All rights reserved.</p>
+      {/* Workflow Section */}
+      <section className="workflow">
+        <h2>How It Works</h2>
+
+        <div className="workflow-steps">
+          <div className="step">
+            <span>01</span>
+            <h4>Create Events</h4>
+            <p>Organizers create and submit events for admin approval.</p>
+          </div>
+
+          <div className="step">
+            <span>02</span>
+            <h4>Assign Volunteers</h4>
+            <p>Volunteers apply and get assigned tasks effortlessly.</p>
+          </div>
+
+          <div className="step">
+            <span>03</span>
+            <h4>Track & Manage</h4>
+            <p>Admins monitor progress and ensure smooth execution.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call To Action */}
+      <section className="cta">
+        <h2>Ready to Streamline Workforce Management?</h2>
+        <p>
+          Join WorkLink and experience structured, efficient, and transparent
+          workforce coordination.
+        </p>
+        <Link to="/register" className="btn primary large">
+          Create Account
+        </Link>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>© {new Date().getFullYear()} WorkLink. All rights reserved.</p>
       </footer>
     </div>
   );

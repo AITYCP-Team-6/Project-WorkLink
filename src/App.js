@@ -23,12 +23,13 @@ import VolunteerPayments from "./dashboards/volunteer/Payments";
 /* COMMON */
 import Reports from "./dashboards/common/Reports";
 import OrganizerApplications from "./dashboards/organizer/OrganizerApplications";
+import Home from "./Home";
 
 function App() {
   return (
     <Routes>
       {/* AUTH */}
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 

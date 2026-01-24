@@ -1,43 +1,82 @@
 .navbar {
   height: 64px;
-  background: #ffffff;
+  background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
-  padding: 0 24px;
+  padding: 0 1.5rem;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
+/* Left */
 .navbar-left {
   display: flex;
   align-items: center;
 }
 
 .page-title {
-  font-size: 20px;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: #0f172a;
+  color: #111827;
 }
 
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+/* Right */
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .login-info {
-  font-size: 14px;
-  color: #475569;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
+.role-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+/* Avatar */
 .avatar {
-  width: 36px;
-  height: 36px;
-  background: #e0e7ff;
-  color: #4f46e5;
-  font-weight: 600;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  background-color: #1e40af;
+  color: #ffffff;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.2rem;
+  }
+
+  .login-info {
+    display: none;
+  }
 }
