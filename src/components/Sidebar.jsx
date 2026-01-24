@@ -8,7 +8,7 @@ const Sidebar = ({ role }) => {
 
   const handleLogout = () => {
     logout(); // clear auth + localStorage
-    navigate("/login"); // redirect to login page
+    navigate("/"); // redirect to login page
   };
 
   return (
