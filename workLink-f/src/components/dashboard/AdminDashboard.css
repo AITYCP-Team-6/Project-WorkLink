@@ -1,0 +1,108 @@
+/* src/components/dashboard/AdminDashboard.css */
+/* Minimal CSS for animations and custom styles */
+
+/* Smooth fade-in animation for page load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth slide-in for content changes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations */
+.admin-dashboard-container {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.tab-content-animate {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Custom scrollbar for tables and charts */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Recharts responsive container fix */
+.recharts-responsive-container {
+  min-height: 300px;
+}
+
+/* Print styles */
+@media print {
+  .sidebar,
+  button,
+  .no-print {
+    display: none !important;
+  }
+  
+  .main-content {
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .overflow-x-auto table {
+    min-width: 800px;
+  }
+  
+  .recharts-responsive-container {
+    min-height: 250px;
+  }
+}

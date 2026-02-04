@@ -1,0 +1,235 @@
+/* ================= ROOT THEME ================= */
+:root {
+  --purple-main: #7b5cc9;
+  --purple-dark: #4b369e;
+  --purple-glow: rgba(123, 92, 201, 0.35);
+  --purple-soft: #e6deff;
+  --purple-bg: #f1ecff;
+  --text-dark: #1b1b2f;
+  --text-muted: #4c4c6a;
+}
+
+/* ================= GLOBAL ================= */
+.home-root {
+  font-family: "Inter", system-ui, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ebe4ff 0%, #f3efff 40%, #f7f4ff 100%);
+  color: var(--text-dark);
+}
+
+/* ================= NAVBAR ================= */
+.home-navbar {
+  background: linear-gradient(to right, #efe9ff, #ffffff, #efe9ff);
+  border-bottom: 1px solid #ddd3ff;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--purple-main);
+  letter-spacing: 0.5px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-muted);
+  position: relative;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--purple-main);
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.nav-login {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--purple-main);
+}
+
+.nav-register {
+  text-decoration: none;
+  padding: 9px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--purple-main), var(--purple-dark));
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8px 20px var(--purple-glow);
+}
+
+/* ================= HERO ================= */
+.hero-section {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  background: radial-gradient(
+    circle at center,
+    #c9baff 0%,
+    #e5ddff 45%,
+    #f5f2ff 75%
+  );
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(123, 92, 201, 0.25),
+    transparent 65%
+  );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 46px;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.hero-content h1 span {
+  color: var(--purple-main);
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple-main), var(--purple-dark));
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 30px var(--purple-glow);
+}
+
+.btn-outline {
+  border: 2px solid var(--purple-main);
+  color: var(--purple-main);
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  background: #fff;
+}
+
+/* ================= ROLES ================= */
+.roles-section {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #f5f2ff 0%, #efe9ff 100%);
+}
+
+.roles-section h2 {
+  font-size: 32px;
+  margin-bottom: 55px;
+  color: var(--purple-main);
+}
+
+.roles-grid {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.role-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 34px 26px;
+  box-shadow: 0 18px 50px rgba(123, 92, 201, 0.18);
+  transition: transform 0.35s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-10px);
+}
+
+.role-card.highlight {
+  border: 2px solid var(--purple-main);
+}
+
+.role-badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--purple-main);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.role-card h3 {
+  font-size: 21px;
+  color: var(--purple-dark);
+  margin-bottom: 14px;
+}
+
+.role-card p {
+  font-size: 15.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ================= FOOTER ================= */
+.home-footer {
+  padding: 22px;
+  text-align: center;
+  font-size: 14px;
+  background: linear-gradient(to right, #e6deff, #f3efff, #e6deff);
+  color: #555;
+}
